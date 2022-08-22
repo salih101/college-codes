@@ -5,7 +5,7 @@ int main(){
 	printf("Enter the Range:");
 	scanf("%d%d",&j,&u);
 	printf("Amstrong Numbers in the range: %d t0 %d",j,u);
-	for (i=1;i<=u;i++){
+	for (i=j;i<=u;i++){
 		s=0;
 		m=i;
 		while(m){
