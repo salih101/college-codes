@@ -1,14 +1,20 @@
 #include<stdio.h>
 #include<string.h>
+
 int main()
 {
-	char str1[20],temp[20];
-	printf("Enter the string:");
-	gets(str1);
-	strcpy(temp,str1);
-    strrev(str1);
-	if (strcmp(temp,str1))
-	printf("Entered String '%s' is not pallindrome",temp);
-	else 
-	printf("Entered String '%s' is pallindrome",temp);
+	int i,flag=1,j;
+	char str[50];
+
+	printf("Enter the String:");
+	gets(str);
+	j=strlen(str);
+
+	for(i=0;i<j;i++,j--)
+		if(str[i]!=str[j-1]){
+			flag=0;
+			break;
+		}
+	if(flag==1) printf("\nEnterd String is Palindrome");
+	else printf("\nEnterd String is not Palindrome");
 }
